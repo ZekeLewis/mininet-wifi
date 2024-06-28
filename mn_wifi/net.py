@@ -28,8 +28,8 @@ from mn_wifi.link import IntfWireless, wmediumd, _4address, HostapdConfig, \
     WirelessLink, TCWirelessLink, ITSLink, WifiDirectLink, adhoc, mesh, \
     master, managed, physicalMesh, PhysicalWifiDirectLink, _4addrClient, \
     _4addrAP, phyAP
-from mn_wifi.mobility import Tracked as TrackedMob, model as MobModel, \
-    Mobility as mob, ConfigMobility, ConfigMobLinks
+from mn_wifi.mobility import Tracked as mob, model as MobModel, \
+     ConfigMobility, ConfigMobLinks
 from mn_wifi.module import Mac80211Hwsim
 from mn_wifi.node import AP, Station, Car, OVSKernelAP, physicalAP
 from mn_wifi.plot import Plot2D, Plot3D, PlotGraph
@@ -47,7 +47,7 @@ from mn_wifi.wwan.node import WWANNode
 
 VERSION = "2.6"
 
-
+TrackedMob = mob
 class Mininet_wifi(Mininet, Mininet_IoT, Mininet_WWAN):
 
     def __init__(self, accessPoint=OVSKernelAP, station=Station, car=Car,
